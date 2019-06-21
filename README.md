@@ -48,24 +48,24 @@ Now We will manage datbase query for different CRUD operation for this created t
   1) **"getTotalTaskCount()"** : It will give count of total entries available in database.
   2) **"readAllTask()"**       : It will read all entries available by values in database.
   3) **"readTaskByID()"**      : It will read entry by given id if available in database.
-- Here most important thing is you will get return data in **LiveData** class, so you need to formate it. For this you can use **Observer** class method.
+- Here most important thing is you will get return data in **LiveData** class, so you need to formate it. For this you can use **Observer** class methods.
 - Use below method for observing **LiveData**:
   1) This method will return multiple data:
-  '''
+  ```
   repositoryTask.readAllTask().observe(ActivityMain.this, new Observer<List<ModelTask>>() {
       @Override
       public void onChanged(List<ModelTask> models) {
       }
   });
-  '''
+  ```
   2) This method will return single object:
-  '''
+  ```
   repositoryTask.readTaskByID(...).observeForever(new Observer<ModelTask>() {
       @Override
       public void onChanged(ModelTask model) {
       }
   });
-  '''
+  ```
   
 ### Step 04 : UPDATE
 - Update task.
