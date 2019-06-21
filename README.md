@@ -16,20 +16,19 @@ We will follow these below steps to understand CRUD operations of Room Database.
 
 ### Step 01:
 - Base components for Room database in Android is:
-  1. **Database:**
+  1) **Database:**
      - It contains the holder and serves as the main access point for the connection.
      - It is an abstract class extends with RoomDatabase and annoted with @Database.
-  2. **Entity:**
+  2) **Entity:**
      - It represent the table within the database.
-  3. **DAO:**
+  3) **DAO:**
      - It contains the method used for accessing the database.
-  4. **Repository:**
+  4) **Repository:**
      - It is used to managing multiple data sources.
-  5. **ViewModel:**
+  5) **ViewModel:**
      - It works as a communication between Repository and UI.
-  6. **LiveData:**
+  6) **LiveData:**
      - It is a data holder class. It observes automatically when data has changed.
-
 - We will manage three values in database:
   1) **Id (Auto Increment)**  : It is an unique id of Task created.
   2) **TaskName**             : It is a name of Task.
