@@ -29,32 +29,44 @@ We will follow these below steps to understand CRUD operations of Room Database.
      - It works as a communication between Repository and UI.
   6. **LiveData:**
      - It is a data holder class. It observes automatically when data has changed.
-      
-- First we will create database named **"my_task_db"**.
-- Create a table under this database named **"my_task_table"**.
+
 - We will manage three values in database:
   1) **Id (Auto Increment)**  : It is an unique id of Task created.
   2) **TaskName**             : It is a name of Task.
   3) **TaskDateTime**         : It is a date & time of Task created.
-- This are two methods below, whis will handle operation:
-  1) **getReadableDatabase()**
-  2) **getWritableDatabase()**
 
 Now We will manage datbase query for different CRUD operation for this created table.
 
 ### Step 02 : CREATE
 - Create new task.
 - We will create a method named **"createTask()"**.
-- Use "ContentValues" class to insert multiple entries in database.
-- method **"db.insert(...)"** will insert entry in to created database.
+- method **"repositoryTask.createTask(model)(...)"** will insert entry in to created database.
 
 ### Step 03 : READ
-- Read all task.
+- Read all task or task by ID.
 - We will create three methods for different read related operation.
   1) **"getTotalTaskCount()"** : It will give count of total entries available in database.
   2) **"readAllTask()"**       : It will read all entries available by values in database.
   3) **"readTaskByID()"**      : It will read entry by given id if available in database.
-
+- Here most important thing is you will get return data in **LiveData** class, so you need to formate it. For this you can use **Observer** class method.
+- Use below method for observing **LiveData**:
+  1) This method will return multiple data:
+  '''
+  repositoryTask.readAllTask().observe(ActivityMain.this, new Observer<List<ModelTask>>() {
+      @Override
+      public void onChanged(List<ModelTask> models) {
+      }
+  });
+  '''
+  2) This method will return single object:
+  '''
+  repositoryTask.readTaskByID(...).observeForever(new Observer<ModelTask>() {
+      @Override
+      public void onChanged(ModelTask model) {
+      }
+  });
+  '''
+  
 ### Step 04 : UPDATE
 - Update task.
 - We will create a method named **"updateTask()"**.
