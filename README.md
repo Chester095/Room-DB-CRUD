@@ -77,7 +77,7 @@ Now We will manage datbase query for different CRUD operation for this created t
 - We will create a method named **"deleteTask()"**.
 - method **"repositoryTask.deleteTask(model)"** will delete entry of given id in to database.
 
-Read more about Room database operations in Android here: [Room](https://developer.android.com/training/data-storage/room/index.html)
+Read more about Room database operations in Android here: [Room](https://developer.android.com/training/data-storage/room)
 
 # Thanks for you Time & Consideration.
 If you feel that this tutorial really helps you than give me a like by clicking above 🟊 STAR button.
