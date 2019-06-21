@@ -15,7 +15,7 @@ Here in this tutorial we try to do an example of To Do list. You can find the st
 We will follow these below steps to understand CRUD operations of Room Database.
 
 ### Step 01:
-- Base components for Room database in Android is,
+- Base components for Room database in Android is:
   1. **Database:**
      - It contains the holder and serves as the main access point for the connection.
      - It is an abstract class extends with RoomDatabase and annoted with @Database.
