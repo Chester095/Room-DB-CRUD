@@ -70,17 +70,14 @@ Now We will manage datbase query for different CRUD operation for this created t
 ### Step 04 : UPDATE
 - Update task.
 - We will create a method named **"updateTask()"**.
-- method **"db.update(...)"** will updte enter of given id by necessary values in to database.
+- method **"repositoryTask.updateTask(model)"** will updte enter of given id by necessary values in to database.
 
 ### Step 05 : DELETE
 - Delete task.
 - We will create a method named **"deleteTask()"**.
-- method **"db.delete(...)"** will delete entry of given id in to database.
-- If you want to clear all values available in table than use
-      **"db.delete(TABLE_NAME, null, null)"**
-  It will delete all entries available in that table in to database.
+- method **"repositoryTask.deleteTask(model)"** will delete entry of given id in to database.
 
-Read more about MYSQL database operations in Android here: [SQLiteOpenHelper](https://developer.android.com/reference/android/database/sqlite/SQLiteOpenHelper)
+Read more about Room database operations in Android here: [Room](https://developer.android.com/training/data-storage/room/index.html)
 
 # Thanks for you Time & Consideration.
 If you feel that this tutorial really helps you than give me a like by clicking above 🟊 STAR button.
